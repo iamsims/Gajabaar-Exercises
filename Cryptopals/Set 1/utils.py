@@ -18,7 +18,6 @@ def bXor(byte_string_1,byte_string_2):
     """
     return bytes([b1 ^ b2 for b1, b2 in zip(byte_string_1, byte_string_2)])
 
-
 def get_english_score(input_bytes):
     """Compares each input byte to a character frequency 
     chart and returns the score of a message based on the
@@ -76,27 +75,8 @@ def single_char_xor(input_bytes, char_value):
 def repeating_xor(input_bytes, key_bytes):
     keystring = key_bytes*(math.ceil(len(input_bytes)/len(key_bytes)))
     keystring= keystring[:len(input_bytes)]
-    # print(keystring)
-    # print(input_bytes)
-    # print(len(input_bytes))
-    # print(len(keystring))
+
     return bXor(input_bytes, keystring)
     
-
-
-# main()
-# a= fixedXor('1c0111001f010100061a024b53535009181c', '686974207468652062756c6c277320657965')
-# print(type(a))
-# print(a)
-
-# key = b'77'
-# print(key.decode())
-
-# # for i in byte_string_1:
-# #     print(i)
-
-# # print(type(byte_string_1))
-
-# print(ord(10))
 
 
